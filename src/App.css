@@ -1,0 +1,176 @@
+* {
+  transition: 0.5;
+  cursor: pointer;
+}
+
+.login-button {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+}
+
+.login-button div {
+  padding-left: 5px;
+  position: relative;
+  top: -3px;
+}
+
+.nav-section {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-list {
+  display: flex;
+  list-style-type: none;
+  flex: 4;
+  justify-content: center;
+}
+
+.menu-list li {
+  padding: 10px;
+}
+
+.menu-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.searc-input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000;
+  padding-left: 15px;
+
+}
+
+.line-1 {
+  position: relative;
+}
+
+.line-1-1 {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  z-index: 2;
+  transition: 0.5s;
+  display: none;
+}
+
+.line-1-1 span {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #000;
+}
+
+.line-1-1 span:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.line-1-1 span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.line-1-1 span:nth-child(3) {
+  top: 100%;
+  transform: translateY(-50%);
+}
+
+.search-icon {
+  position: relative;
+  right: -10px;
+}
+
+.line-1-1.add span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.line-1-1.add span:nth-child(2) {
+  display: none;
+}
+
+.line-1-1.add span:nth-child(3) {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.card img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+.productDetail-img img {
+  width: 100%;
+  height: 100%;
+}
+
+#dropdown-basic-button {
+  background-color: white !important;
+  color: black;
+  transition: 0.5s;
+}
+#dropdown-basic-button:hover {
+  background-color: black !important;
+  color: white;
+}
+.btn1 {
+ margin-top: 30px;
+ width: 100%;
+ background-color: black;
+ color: white;
+ padding:10px;
+ border-radius: 5px;
+}
+.search-area{
+  position: relative;
+  top:-10px;
+  right: 60px;
+}
+@media (max-width: 850px) {
+  .line-1-1 {
+    display: block;
+  }
+
+  .menu-list {
+
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: -200%;
+    justify-content: center;
+    transition: 0.2s;
+    color: white;
+    opacity: 0.5;
+  }
+
+  .menu-list.add {
+    left: 0;
+    background-color: brown;
+    height: 200vh;
+    z-index: 3;
+  }
+
+  .search-area {
+    display: none;
+  }
+
+  .line-1-1.add {
+    left: 150px;
+    top: -20px;
+  }
+}
